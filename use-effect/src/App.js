@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Timer from './components/Timer';
 
 function App() {
   const [count, setCount] = useState(1);
   const [name, setName] = useState('');
+  const [showTimer, setShowTimer] = useState(false);
 
   const handleCountUpdate = () => {
       setCount(count + 1);
@@ -39,7 +41,9 @@ function App() {
       <button onClick={handleCountUpdate}>Update</button>
       <span>count: {count}</span>
       <input type="text" value={name} onChange={handleInputChange}/>
-  <span>name {name}</span>
+      <span>name {name}</span>
+      {showTimer && <Timer/>}
+      <button onClick={() => setShowTimer(!showTimer)}>Toggle Timer</button>
     </div>
   );
 }
