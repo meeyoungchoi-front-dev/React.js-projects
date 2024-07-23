@@ -1,10 +1,9 @@
 import React from 'react'
+import PokemonItem from './PokemonItem';
 
 const PokemonList = ({pokimonData}) => {
-    console.log(pokimonData);
   return (
-    <div>PokemonList</div>
+    <PokemonItem pokimonData={pokimonData}/>
   )
 }
-
 export default PokemonList;
