@@ -3,7 +3,7 @@ import React from 'react'
 const PokemonItem = ({pokimonData}) => {
   return (
     <>
-       <h1>포켓몬 도감</h1>
+       <h1>포켓몬 도감 - 포켓몬 이름과 이미지</h1>
        {pokimonData.map(data => 
        <div>
             <li>

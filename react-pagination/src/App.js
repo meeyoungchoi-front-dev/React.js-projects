@@ -9,12 +9,18 @@ function App() {
   const [pokimonData, setPokimon] = useState([]);
 
   useEffect(() => {
+
     async function get() {
-        const results = axios.get(`https://pokeapi.co/api/v2/pokemon/ditto`);
-        if  (results.ok) {
-            const fetchData = await results.json;
-            setPokimon(fetchData);
-        }
+      
+        const results = axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1302&offset=1`);
+       
+            const fetchData = await results;
+            console.log(fetchData.data.results);
+            setPokimon(fetchData.data.results);
+        
+        
+        
+      
     };
     get();
   }, []); 
