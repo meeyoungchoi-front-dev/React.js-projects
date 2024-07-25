@@ -34,25 +34,44 @@ function App() {
   }, [imageFiles]);
 
   return (
+    // <div>
+    //   <h2>이미지 미리보기</h2>
+    //   <input 
+    //         type="file" 
+    //         multiple
+    //         accept='image/jpg, image/jpeg, image/png' 
+    //         onChange={e => handleImageUpload(e)}
+    //         ref={imgRef}/>    
+    //   <div>
+    //   <button onClick={onClick}>이미지 업로드</button>
+    //   <div>
+    //     {imageFiles.map((image, id) => {
+    //       <div key={id}>
+    //         <img src={image || process.env.PUBLIC_URL + "/image.png"}  alt="Preview"/>
+    //       </div>
+    //     })} 
+    //   </div>
+    //   </div>
+    // </div>
     <div>
-      <h2>이미지 미리보기</h2>
-      <input 
-            type="file" 
-            multiple
-            accept='image/jpg, image/jpeg, image/png' 
-            onChange={e => handleImageUpload(e)}
-            ref={imgRef}/>    
-      <div>
-      <button onClick={onClick}>이미지 업로드</button>
-      <div>
-        {imageFiles.map((image, id) => {
-          <div key={id}>
-            <img src={image || process.env.PUBLIC_URL + "/image.png"}  alt="Preview"/>
-          </div>
-        })} 
-      </div>
-      </div>
+    <h2>이미지 미리보기</h2>
+    <input 
+      type="file" 
+      multiple
+      accept='image/jpg, image/jpeg, image/png' 
+      onChange={handleImageUpload}
+      ref={imgRef}
+      style={{ display: 'none' }} // 파일 입력 필드를 숨깁니다.
+    />
+    <button onClick={onClick}>이미지 업로드</button>
+    <div>
+      {imageFiles.map((image, id) => (
+        <div key={id}>
+          <img src={image} alt="Preview" />
+        </div>
+      ))}
     </div>
+  </div>
   );
 }
 
