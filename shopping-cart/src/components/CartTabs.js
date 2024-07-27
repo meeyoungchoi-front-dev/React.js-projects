@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartTabs = () => {
   return (
-    <div>layout</div>
+    <div>CartTab</div>
   )
 }
 
