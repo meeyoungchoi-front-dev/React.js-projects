@@ -1,5 +1,3 @@
-// src/stores/reducer.js
-
 import { handleActions } from 'redux-actions';
 import { INCREMENT, DECREMENT } from './actionType';
 
