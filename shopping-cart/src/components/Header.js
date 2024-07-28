@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap 스타일 가져오기
 import {Link} from "react-router-dom";
-import iconCart from "../assets/images/iconCart.png";
+import iconCart from "../assets/images/cart.png";
 
 const Header = () => {
   return (
