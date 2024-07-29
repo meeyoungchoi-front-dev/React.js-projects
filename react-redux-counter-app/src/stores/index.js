@@ -1,5 +1,3 @@
-// src/stores/index.js
-
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './reducer';
 

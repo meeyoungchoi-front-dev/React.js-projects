@@ -1,10 +1,8 @@
-// src/App.js
-
 import React from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { increment, decrement } from './stores/actions'; // 올바른 경로로 import
+import { increment, decrement } from './stores/actions'; 
 
 function App() {
   // 스토어에 저장되어 있는 상태를 선택해주는 역할을 한다
