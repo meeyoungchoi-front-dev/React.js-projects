@@ -1,22 +1,19 @@
 import React , { useRef, useEffect}  from 'react';
-import styles from '../App.css'; // 수정된 경로
+import styles from '../App.css';
 
 const ModalPopup = () =>  {
- // useRef로 DOM 요소에 접근하기 위한 참조 생성
  const toggleRef = useRef(null);
 
  useEffect(() => {
    const body = document.querySelector('body');
-   const toggle = toggleRef.current; // toggleRef.current로 접근
+   const toggle = toggleRef.current; 
    if (toggle) {
      toggle.onclick = function () {
        toggle.classList.toggle('active');
        body.classList.toggle('active');
      };
    }
- }, []); // 빈 배열을 사용하여 컴포넌트가 마운트될 때 한 번만 실행
-
-
+ }, []);
 
   return (
     <div className="{styles.container}">
