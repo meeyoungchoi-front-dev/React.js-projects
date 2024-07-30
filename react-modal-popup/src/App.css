@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative; /* 팝업 위치 설정 */
 }
 
 .container.active {
@@ -48,13 +49,20 @@
     flex-direction: column;
     justify-content: left;
     border-radius: 1rem;
-    transform: scale(0);
+    transform: translateY(-20px) scale(0); /* 팝업이 위에서 아래로 나타나도록 설정 */
     box-shadow: 0 .1rem 1rem rgba(0,0,0, .8); /* 오타 수정: rga -> rgba */
     transition: .5s;
+    position: absolute; /* 팝업을 절대 위치로 설정 */
+    top: -250px; /* 버튼 위에 위치하도록 설정 */
+    left: 50%;
+    transform: translateX(-50%) scale(0); /* 수평 가운데 정렬과 초기 scale 0으로 설정 */
+    opacity: 0;
+    z-index: 10;
 }
 
 .popBox.active { /* class 이름 변경: spop-box -> popBox */
-    transform: scale(1);
+    transform: translateX(-50%) translateY(-20px) scale(1); /* 팝업 활성화 시 위치 및 크기 변경 */
+    opacity: 1;
 }
 
 .popBox h1 {
