@@ -11,7 +11,8 @@ const handleOutsideClick = (e) => {
   };
   return (
     
-    <div className="modal-container" onClick={handleOutsideClick}>
+    // <div className="modal-container" onClick={handleOutsideClick}>
+     <div className="modal-container">
         <div className='modal'>
             <div className='modal-header'>
                 <p className='close' onClick={() => onClose("the modal was closed")}>&times;</p>
